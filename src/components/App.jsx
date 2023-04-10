@@ -33,12 +33,12 @@ export class App extends Component {
     }
   }
 
-  newContact = e => {
+  handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
 
-  removeId = e => {
+  handleSubmit = e => {
     const id = nanoid();
     const name = e.name;
     const number = e.number;
@@ -50,7 +50,7 @@ export class App extends Component {
       contactsLists.push({ name, id, number });
     }
 
-    // this.setState({ contacts: contactsLists });
+    this.setState({ contacts: contactsLists });
   };
 
   handleDelete = e => {
