@@ -84,14 +84,16 @@ export class App extends Component {
           color: '#010101',
         }}
       >
+        
         <h1>Phonebook</h1>
         <ContactForm handleSubmit={this.handleSubmit} />
+
         <h2> Contacts</h2>
         <Filter filter={filter} handleChange={this.handleChange} />
+
         <ContactList
           contacts={this.getFilteredContacts()}
-          handleDelete={this.handleDelete}
-        />
+          handleDelete={this.handleDelete} />
       </div>
     );
   }
